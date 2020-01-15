@@ -5,12 +5,70 @@ body {
 /* Content Area */
 /* ============================================= */
 
+.contentArea {
+    background-color: gray;
+    opacity: 0.9;
+    width: 960px;
+    height: 500px;
+    margin: 10% 15%;
+}
+
 /* Game Title */
 /* ============================================= */
+
+.gameTitle {
+    width: fit-content;
+    height: 35px;
+    margin: 5% 40%;
+    opacity: 1;
+    text-align: center;
+    font-size: xx-large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    font-weight: 800;
+}
+
+/* Game Timer */
+/* ============================================= */
+
+.gameTimer {
+    width: fit-content;
+    height: 27.5px;
+    margin: 10% 40%;
+    opacity: 1;
+    text-align: center;
+    font-size: large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    font-weight: 800;
+}
 
 /* Game Questions */
 /* ============================================= */
 
+.gameQuestions {
+    width: fit-content;
+    height: 30px;
+    margin: 5% 40%;
+    opacity: 1;
+    text-align: center;
+    font-size: x-large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    font-weight: 800;
+}
+
 /* Game Possible Answers */
 /* ============================================= */
 
+.gamePossibleAnswers {
+    width: fit-content;
+    height: 70px;
+    margin: 5% 40%;
+    opacity: 1;
+    text-align: center;
+    font-size: x-large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    font-weight: 800;
+}
