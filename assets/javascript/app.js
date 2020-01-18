@@ -23,15 +23,15 @@
         var quizQuestions = [
             {
                 question: "Who is the only President to serve more than eight years?" + "<br><br>" + "A. George Washington" + "<br>" + "B. Franklin Roosevelt" + "<br>" + "C. Andrew Jackson",
-                answer: "b"
+                answer: "b",
             },
             {
                 question: "Which of these Presidents is on Mt. Rushmore?" + "<br>" + "A. George Bush" + "<br>" + "B. John Adams" + "<br>" + "C. Abraham Lincoln",
-                answer: "c"
+                answer: "c",
             },
             {
                 question: "Who held office when humans first walked on the moon?"  + "<br>" + "A. Lyndon B. Johnson" + "<br>" + "B. Richard Nixon" + "<br>" + "C. John F. Kennedy",
-                answer: "b"
+                answer: "b",
             },
         ]
 
@@ -53,7 +53,7 @@
             $(".gameTimer").html("This is a quiz to test your Presidential knowledge!")
             $(".gameQuestions").html("You have 12 seconds to answer each question. Click anywhere to get started. Good luck!")
             
-            $(window).on("click", gameStarted)
+            $(".contentArea").on("click", gameStarted)
         }
 
     // Game Started //
@@ -62,20 +62,24 @@
         function gameStarted() {            
             $(".gameTitle").html("Presidential Memory")
             // $(".gameTimer")            
-            $(".gameQuestions").html(array[0].question)
-            
-            
-
-            for (var i = 0; i < array.length; i++) {
-                
-                if (userAnswer == array[i].answer) {
-                    console.log("you win")
-                }
-                
-            }
+            $(".gameQuestions").html(questionLoop)
         }
 
-    
+    // Question Loop //
+    // ========================================================== //
+
+        function questionLoop() {
+            
+            
+
+            for (var i = 0; i < quizQuestions.length; i++) {
+
+                gameQuestions.html(quizQuestions[i].question)
+                console.log("test")
+            
+            }
+            
+        }
         
 
 // Main Process //
