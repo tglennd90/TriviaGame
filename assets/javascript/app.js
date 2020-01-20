@@ -22,22 +22,32 @@
     // Arrays //
     // ========================================================== //
 
-        
-
-        // var quizQuestions = [
-        //     [
-        //         "Who is the only President to serve more than eight years?" + "<br><br>" + "A. George Washington" + "<br>" + "B. Franklin Roosevelt" + "<br>" + "C. Andrew Jackson",
-        //         "b",
-        //     ],
-        //     [
-        //         "Which of these Presidents is on Mt. Rushmore?" + "<br>" + "A. George Bush" + "<br>" + "B. John Adams" + "<br>" + "C. Abraham Lincoln",
-        //         "c",
-        //     ],
-        //     [
-        //         "Who held office when humans first walked on the moon?"  + "<br>" + "A. Lyndon B. Johnson" + "<br>" + "B. Richard Nixon" + "<br>" + "C. John F. Kennedy",
-        //         "b",
-        //     ],
-        // ]
+        var quizQuestions = [
+            {
+                question: "Who is the only President to serve more than eight years?",
+                image: "assets/images/house.jpg",
+                choiceA: "George Washington",
+                choiceB: "Franklin Roosevelt",
+                choiceC: "Andrew Jackson",
+                answer: "B",
+            },
+            {
+                question: "Which of these Presidents is on Mt. Rushmore?",
+                image: "assets/images/mount.jpg",
+                choiceA: "George Bush",
+                choiceB: "John Adams",
+                choiceC: "Abraham Lincoln",
+                answer: "C",
+            },
+            {
+                question: "Who held office when humans first walked on the moon?",
+                image: "assets/images/moon.jpg",
+                choiceA: "Lyndon B. Johnson",
+                choiceB: "Richard Nixon",
+                choiceC: "John F. Kennedy",
+                answer: "B",
+            },
+        ]
 
     // Objects //
     // ========================================================== //
