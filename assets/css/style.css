@@ -1,65 +1,7 @@
-body {
-    background-size: cover;
-}
+
 
 /* Content Area */
 /* ============================================= */
-
-.contentArea {
-    background-color: gray;
-    opacity: 0.95;
-    width: 960px;
-    height: 800px;
-    margin: 10% 15%;
-}
-
-/* Game Title */
-/* ============================================= */
-
-.gameTitle {
-    width: fit-content;
-    height: 35px;
-    padding: 5% 40% 5% 40%;
-    opacity: 1;
-    text-align: center;
-    font-size: xx-large;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-style: italic;
-    font-weight: 800;
-    color: black;
-}
-
-/* Game Timer */
-/* ============================================= */
-
-.gameTimer {
-    width: 400px;
-    height: 27.5px;
-    margin: 10% 30%;
-    opacity: 1;
-    text-align: center;
-    font-size: x-large;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-style: italic;
-    font-weight: 800;
-    color: rgba(255, 0, 0, 0.822);
-}
-
-/* Game Questions */
-/* ============================================= */
-
-.gameQuestions {
-    width: 400px;
-    height: fit-content;
-    margin: 5% 30%;
-    opacity: 1;
-    text-align: center;
-    font-size: x-large;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-style: italic;
-    font-weight: 800;
-    color: white;
-}
 
 
 
