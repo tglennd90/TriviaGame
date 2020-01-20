@@ -4,7 +4,20 @@
     // Variables //
     // ========================================================== //
 
-        
+        const startQuiz = $("#startQuiz");       
+        const contentArea = $("#contentArea");
+        const questionImage = $("#questionImage");
+        const question = $("#question");
+        const questionTimer = $("#questionTimer");
+        const timeCount = $("#timeCount");
+        const gaugeBackground = $("#gaugeBackground");
+        const gauge = $("#gauge");
+        const answerChoices = $("#answerChoices");
+        const a = $("#a");
+        const b = $("#b");
+        const c = $("#c");
+        const progressBar = $("#progressBar");
+        const quizResults = $("#quizResults");
 
     // Arrays //
     // ========================================================== //
