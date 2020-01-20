@@ -1,9 +1,199 @@
+body {
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
+/* Start Quiz */
+/* ========================================== */
+
+#startQuiz {
+    font-size: 1.5em;
+    font-weight: bolder;
+    width: 200px;
+    height: 65px;
+    border: 5px solid black;
+    margin: 15% 45%;
+    padding-top: 3%;
+    text-align: center;
+    cursor: pointer;
+    color: black;
+    background-color: whitesmoke;
+}
+
+#startQuiz:hover {
+    border: 5px solid chartreuse;
+    color: chartreuse;
+    background-color: gray;
+    width: 400px;
+    height: 130px;
+    padding-top: 8%;
+    margin: 15% 35%;
+}
 
 /* Content Area */
-/* ============================================= */
+/* ========================================== */
 
+#contentArea {
+    margin: 75px auto;
+    background-color: white;
+    height: 300px;
+    width: 700px;
+    border-radius: 5px;
+    box-shadow: 0px 7.5px 15px 0px;
+    position: relative;
+}
 
+/* Question Image */
+/* ========================================== */
 
+#questionImage {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
 
+#questionImage img {
+    width: 200px;
+    height: 200px;
+    border-top-left-radius: 5px;
+}
 
+/* Question */
+/* ========================================== */
+
+#question {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 500px;
+    height: 125px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#question p {
+    margin: 0;
+    padding: 15px;
+}
+
+/* Question Timer */
+/* ========================================== */
+
+#questionTimer {
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    bottom: 0px;
+    text-align: center;
+    padding-top: 15%;
+}
+
+/* Time Count */
+/* ========================================== */
+
+#counter {
+    padding-top: 15%;
+    font-size: 3px;
+}
+
+/* Gauge Background */
+/* ========================================== */
+
+#gaugeBackground {
+    width: 150px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: lightgray;
+    margin-left: 25px;
+}
+
+/* Gauge */
+/* ========================================== */
+
+#gauge {
+    height: 10px;
+    border-radius: 10px;
+    background-color: lawngreen;
+    margin-top: -10px;
+    margin-left: 25px;
+}
+
+/* Answer Choices */
+/* ========================================== */
+
+#answerChoices {
+    
+    width: 480px;
+    position: absolute;
+    right: 0;
+    top: 125px;
+    
+}
+
+.choices {
+    
+    display: inline-block;
+    width: 135px;
+    text-align: center;
+    border: 1px solid grey;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+.choices:hover {
+    border: 2px solid grey;
+    font-weight: bold;
+}
+
+/* Progress Bar */
+/* ========================================== */
+
+#progressBar {
+    width: 500px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    padding: 5px;
+    text-align: right;
+    border: none;
+}
+
+.progress {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #000;
+    display: inline-block;
+    border-radius: 50%;
+    margin-left : 5px;
+    margin-right : 5px;
+}
+
+/* Quiz Results */
+/* ========================================== */
+
+#quizResults {
+    margin: 75px auto;
+    background-color: white;
+    height: 300px;
+    width: 700px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px 0px;
+    position: relative;
+    display: none;
+}
+
+#quizResults p {
+    position: absolute;
+    display: block;
+    width: 59px;
+    height: 59px;
+    top: 130px;
+    left: 325px;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}
