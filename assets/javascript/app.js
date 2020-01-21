@@ -18,6 +18,7 @@
         var c = $("#C");
         var progressBar = $("#progressBar");
         var quizResults = $("#quizResults");
+        var resetQuiz = $("#resetGame");
 
     // Arrays //
     // ========================================================== //
@@ -71,6 +72,7 @@
     // ========================================================== //
     
         startQuiz.on("click", startGame)
+        resetQuiz.on("click", resetGame)
 
         function startGame() {
 
@@ -118,6 +120,20 @@
                 document.getElementById("timeCount").innerHTML = count;
                 document.getElementById("gauge").style.width = count * gaugeProgressUnit + "px";
                 count--;
+
+                if (count >= 8) {
+
+                    document.getElementById("gauge").style.backgroundColor = "green";
+
+                } else if (count >= 4) {
+
+                    document.getElementById("gauge").style.backgroundColor = "yellow";
+
+                } else {
+
+                    document.getElementById("gauge").style.backgroundColor = "red";
+
+                }
 
             } else {
 
@@ -216,10 +232,11 @@
             document.getElementById("contentArea").style.display = "none";
 
             document.getElementById("quizResults").style.display = "block";
+            document.getElementById("resetGame").style.display = "block";
 
             var scorePercent = Math.round(100 * score / quizQuestions.length);
 
-            document.getElementById("quizResults").innerHTML = "<p>" + scorePercent + "%</p>"
+            document.getElementById("quizResults").innerHTML = "<p>" + scorePercent + "%</p><br><br><br>"
 
             if (scorePercent === 100) {
 
@@ -234,6 +251,30 @@
                 document.getElementById("quizResults").style.backgroundColor = "red";
 
             }
+    
+        }
+
+    // Reset Game //
+    // ========================================================== //
+
+        function resetGame() {
+            currentQuizIndex = 0;
+            lastQuizIndex = quizQuestions.length - 1;
+    
+            questionTime = 12;
+            gaugeWidth = 150;
+            count = 12;
+            gaugeProgressUnit = gaugeWidth/questionTime;
+    
+            TIMER; 
+      
+            score = 0;
+            
+            document.getElementById("resetGame").style.display = "none";
+            document.getElementById("quizResults").style.display = "none";
+            
+            $("#progressBar").empty()
+            startGame()
         }
 
 
