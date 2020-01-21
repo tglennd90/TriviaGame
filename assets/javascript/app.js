@@ -47,14 +47,24 @@
                 choiceB: "Richard Nixon",
                 choiceC: "John F. Kennedy",
                 answer: "B",
-            }
+            },
+            {
+                question: "Who held office when humans first walked on the moon?",
+                image: "assets/images/moon.jpg",
+                choiceA: "Lyndon B. Johnson",
+                choiceB: "Richard Nixon",
+                choiceC: "John F. Kennedy",
+                answer: "B",
+            },
         ]
 
     // Variables //
     // ========================================================== //
 
         var currentQuizIndex = 0;
-        var lastQuizIndex = quizQuestions.length - 1;
+        var lastQuizIndex = quizQuestions.length;
+
+        var currentQuizAnswer = quizQuestions[currentQuizIndex].answer;
 
         var questionTime = 12;
         var gaugeWidth = 150;
@@ -77,7 +87,7 @@
         function startGame() {
 
             document.getElementById("startQuiz").style.display = "none";
-            getQuestion()
+            setTimeout(getQuestion, 1000 * 5);
             document.getElementById("contentArea").style.display = "block";
             progressRender();
             counterRender();
@@ -144,12 +154,12 @@
 
                     currentQuizIndex++;
                     count = 12;
-                    getQuestion();
+                    setTimeout(getQuestion, 1000 * 5);
 
                 } else {
 
                     clearInterval(TIMER);
-                    scoreRender();
+                    setTimeout(scoreRender, 5000);
 
                 }
 
@@ -164,12 +174,12 @@
 
                     currentQuizIndex++;
                     count = 12;
-                    getQuestion();
+                    setTimeout(getQuestion, 1000 * 5);
 
                 } else {
 
                     clearInterval(TIMER);
-                    scoreRender();
+                    setTimeout(scoreRender, 5000);
 
                 }
 
@@ -198,12 +208,12 @@
             if (currentQuizIndex < lastQuizIndex) {
 
                 currentQuizIndex++;
-                getQuestion();
+                setTimeout(getQuestion, 1000 * 5);
 
             } else {
 
                 clearInterval(TIMER);
-                scoreRender();
+                setTimeout(scoreRender, 5000)
 
             }
 
@@ -214,13 +224,13 @@
 
         function answerIsCorrect() {
 
-            document.getElementById(currentQuizIndex).style.backgroundColor = "#0f0";
+            document.getElementById(currentQuizIndex).style.backgroundColor = "green";
 
         }
 
         function answerIsIncorrect() {
             
-            document.getElementById(currentQuizIndex).style.backgroundColor = "#f00";
+            document.getElementById(currentQuizIndex).style.backgroundColor = "red";
 
         }
 
