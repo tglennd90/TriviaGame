@@ -141,7 +141,7 @@ body {
     border: 1px solid grey;
     border-radius: 5px;
     cursor: pointer;
-    box-shadow: 0px 7.5px 15px 0px;
+    box-shadow: 0px 7.5px 15px 0px midnightblue;
 }
 
 .choices:hover {
@@ -160,6 +160,7 @@ body {
     padding: 5px;
     text-align: right;
     border: none;
+    
 }
 
 .progress {

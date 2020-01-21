@@ -229,7 +229,7 @@
         function answerIsIncorrect() {
             
             document.getElementById(currentQuizIndex).style.backgroundColor = "red";
-            document.getElementById(quizQuestions[currentQuizIndex].answer).style.backgroundColor = "green";
+            document.getElementById(quizQuestions[currentQuizIndex].answer).style.backgroundColor = "springgreen";
         }
 
     // Score Render //
