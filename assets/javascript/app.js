@@ -57,8 +57,10 @@
         var lastQuizIndex = quizQuestions.length -1;
 
         var currentQuizAnswer = quizQuestions[currentQuizIndex].answer;
+        var quizOne = quizQuestions[1].answer;
+        var quizTwo = quizQuestions[2].answer;
 
-        var questionTime = 12;
+        var questionTime = 16;
         var gaugeWidth = 150;
         var count = 12;
         var gaugeProgressUnit = gaugeWidth/questionTime;
@@ -91,6 +93,10 @@
 
         function getQuestion() {            
             var q = quizQuestions[currentQuizIndex];
+
+            document.getElementById(currentQuizAnswer).style.backgroundColor = "white";
+            document.getElementById(quizOne).style.backgroundColor = "white";
+            document.getElementById(quizTwo).style.backgroundColor = "white";
 
             document.getElementById("questionImage").innerHTML = "<img src=" + q.image + ">";
             document.getElementById("question").innerHTML = "<p>" + q.question + "</p>";
@@ -139,19 +145,19 @@
 
             } else {
 
-                count = 12;
+                count = 16;
                 answerIsIncorrect()
 
                 if (currentQuizIndex < lastQuizIndex) {
 
                     currentQuizIndex++;
-                    count = 12;
-                    setTimeout(getQuestion, 1000 * 5);
+                    count = 16;
+                    setTimeout(getQuestion, 1000 * 4);
 
                 } else {
 
                     clearInterval(TIMER);
-                    setTimeout(scoreRender, 5000)
+                    setTimeout(scoreRender, 2500)
 
                 }
 
@@ -160,18 +166,18 @@
             if (count === -1) {
 
                 answerIsIncorrect()
-                count = 12;
+                count = 16;
                 
                 if (currentQuizIndex < lastQuizIndex) {
 
                     currentQuizIndex++;
-                    count = 12;
-                    setTimeout(getQuestion, 1000 * 5);
+                    count = 16;
+                    setTimeout(getQuestion, 1000 * 4);
 
                 } else {
 
                     clearInterval(TIMER);
-                    setTimeout(scoreRender, 5000);
+                    setTimeout(scoreRender, 2500);
 
                 }
 
@@ -195,17 +201,17 @@
 
             }
 
-            count = 12;
+            count = 16;
 
             if (currentQuizIndex < lastQuizIndex) {
 
                 currentQuizIndex++;
-                setTimeout(getQuestion, 1000 * 5);
+                setTimeout(getQuestion, 1000 * 4);
 
             } else {
 
                 clearInterval(TIMER);
-                setTimeout(scoreRender, 5000)
+                setTimeout(scoreRender, 2500)
 
             }
 
@@ -223,7 +229,7 @@
         function answerIsIncorrect() {
             
             document.getElementById(currentQuizIndex).style.backgroundColor = "red";
-            document.getElementById(currentQuizAnswer).style.backgroundColor = "green";
+            document.getElementById(quizQuestions[currentQuizIndex].answer).style.backgroundColor = "green";
         }
 
     // Score Render //
@@ -263,7 +269,7 @@
             currentQuizIndex = 0;
             lastQuizIndex = quizQuestions.length - 1;
     
-            questionTime = 12;
+            questionTime = 16;
             gaugeWidth = 150;
             count = 12;
             gaugeProgressUnit = gaugeWidth/questionTime;
