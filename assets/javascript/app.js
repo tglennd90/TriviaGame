@@ -48,21 +48,13 @@
                 choiceC: "John F. Kennedy",
                 answer: "B",
             },
-            {
-                question: "Who held office when humans first walked on the moon?",
-                image: "assets/images/moon.jpg",
-                choiceA: "Lyndon B. Johnson",
-                choiceB: "Richard Nixon",
-                choiceC: "John F. Kennedy",
-                answer: "B",
-            },
         ]
 
     // Variables //
     // ========================================================== //
 
         var currentQuizIndex = 0;
-        var lastQuizIndex = quizQuestions.length;
+        var lastQuizIndex = quizQuestions.length -1;
 
         var currentQuizAnswer = quizQuestions[currentQuizIndex].answer;
 
@@ -87,7 +79,7 @@
         function startGame() {
 
             document.getElementById("startQuiz").style.display = "none";
-            setTimeout(getQuestion, 1000 * 5);
+            getQuestion();
             document.getElementById("contentArea").style.display = "block";
             progressRender();
             counterRender();
@@ -159,7 +151,7 @@
                 } else {
 
                     clearInterval(TIMER);
-                    setTimeout(scoreRender, 5000);
+                    setTimeout(scoreRender, 5000)
 
                 }
 
@@ -231,7 +223,7 @@
         function answerIsIncorrect() {
             
             document.getElementById(currentQuizIndex).style.backgroundColor = "red";
-
+            document.getElementById(currentQuizAnswer).style.backgroundColor = "green";
         }
 
     // Score Render //
